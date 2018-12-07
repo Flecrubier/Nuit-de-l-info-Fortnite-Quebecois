@@ -1,0 +1,174 @@
+body
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background-image: url("./Images/background_fortnite.png");
+	background-repeat: no-repeat;
+	background-size: 100%; 
+}
+
+.roundCol
+{
+	background-color: rgb(104, 34, 1);
+	color : rgb(255, 204, 110);
+	margin-top: 20px;
+}
+
+#item
+{
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding-top: 10px;
+	padding-bottom: 0;
+}
+
+#shop
+{
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	text-align: end;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.bouton
+{
+	background-color: rgba(0,0,0,0);
+	border: none;
+	color: rgb(255, 204, 110);
+	font-weight: bold;
+	width: 100%;
+	text-align: end;
+}
+
+.bouton:hover
+{
+	background-color: rgb(150, 47, 0);
+}
+
+.imitem
+{
+	width: 70px;
+	margin: 10px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.imshop
+{
+	width: 70px;
+	margin: 20px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.productivity
+{
+	text-align: center;
+	margin: 0;
+	padding-bottom: 5px;
+	font-size: 0.8em;
+	font-weight: normal;
+	width: 90%;
+	border-bottom: 1px solid rgb(255, 204, 110);
+}
+
+.line
+{
+	line-height: 70px;
+}
+
+.row
+{
+	margin: 0;
+}
+
+#corps
+{
+	text-align: center;
+}
+
+.item
+{
+	width: 100%;
+}
+
+.title
+{
+	text-align: center;
+	width: 90%;
+	font-size: 2em;
+	border-bottom: 1px solid rgb(255, 204, 110);
+	margin-bottom: 0;
+}
+
+#endproducty
+{
+	border: none;
+}
+
+.absoluteCanvas{
+	position: absolute;
+}
+
+#mode{
+	background-color: rgb(104, 34, 1);
+	color : rgb(255, 204, 110);
+	border : none;
+	width : 80%;
+	height : 50px;
+	margin : 20px 10% 20px 10%;
+	padding : 5px;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+#mode:hover{
+	background-color: rgb(150, 47, 0);
+}
+
+#pin1
+{
+	background-color: blue;
+	width: 60px;
+	height: 90px;
+	position: absolute;
+	opacity: 0;
+	z-index: 1;
+}
+
+#pin2
+{
+	background-color: blue;
+	width: 40px;
+	height: 110px;
+	position: absolute;
+	opacity: 0;
+	z-index: 1;
+}
+
+#pinpop
+{
+	position: absolute;
+}
+
+#nbMoney
+{
+	background-color: rgb(104, 34, 1);
+	color : rgb(255, 204, 110);
+	border : none;
+	padding: 5px 20px 5px 20px;
+	font-weight: bold;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#but
+{
+	margin: 20px;
+	font-size: 2em;
+	background-color: rgb(104, 34, 1);
+	color : rgb(255, 204, 110);
+	border : none;
+	border-radius: 10px;
+}

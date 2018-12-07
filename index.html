@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <script src ="./main.js"></script>
+    <script src ="./Librairies/Numeraljs/numeral.js"></script>
+    <script src ="./Librairies/alertify.js"></script>
+    <link href="./css/bootstrap.css" rel="stylesheet" type ="text/css" media="screen"/>
+    <link rel="stylesheet" href="./index.css"/>
+    <link rel="stylesheet" href="./css/alertify.css"/>
+    <title>Piñata</title>
+    <meta name = "viewport" content="width=device-width, minimum-scale=1, initial-scale=, user-scalable=yes">
+</head>
+<body>
+    
+    <div id="pin1" onclick="pinata('pin1')">pin1</div>
+    <div id="pin2" onclick="pinata('pin2')">pin2</div>
+    <img id="pinpop" onclick="addThing('money',1,0)" ondblclick="ouch()">
+    <canvas id="myCanvas" style="position: absolute; z-index: -100;"></canvas>
+
+    <div class="container-fluid">
+        <section class="row">
+            <div class="col-md-2">
+                <div class ="roundCol" id="item"> 
+                    <div class="item">
+                        <img src="./Images/item1.gif" class="imitem" id="itemimg1"/><span id="item1"></span>
+                        <p class="productivity"><span id="itemproduct1">item 1</span></p>
+                    </div>
+                
+                    <div class="item">
+                        <img src="./Images/item2.gif" class="imitem" id="itemimg2"/><span id="item2"></span>
+                        <p class="productivity"><span id="itemproduct2">item 2</span></p>
+                    </div>
+
+                    <div class="item">
+                        <img src="./Images/item3.gif" class="imitem" id="itemimg3"/><span id="item3"></span>
+                        <p class="productivity"><span id="itemproduct3">item 3</span></p>
+                    </div>
+
+                    <div class="item">
+                        <img src="./Images/item4.gif" class="imitem" id="itemimg4"/><span id="item4"></span>
+                        <p class="productivity"><span id="itemproduct4">item 4</span></p>
+                    </div>
+
+                    <div class="item">
+                        <img src="./Images/item5.gif" class="imitem" id="itemimg5"/><span id="item5"></span>
+                        <p class="productivity" id="endproducty"><span id="itemproduct5">item 5</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8" id="corps">
+                <span id="nbMoney">0</span>
+                <div id="but">Cherchez les piñatas !</div>
+            </div>
+
+            <div class="col-md-2">
+                <div class ="roundCol" id="shop">
+                    <p class="title">Shop</p>
+                    <button class="bouton" onclick="addThing('level1',1,0)">
+                        <span id="shop1" class="line">shop 1</span><img class="imshop" src="./Images/shop1.png" id="shopimg1"/>
+                    </button>
+                        
+                    <button class="bouton" onclick="addThing('level2',1,0)">
+                        <span id="shop2" class="line">shop 2</span><img class="imshop" src="./Images/shop2.png" id="shopimg2"/>
+                    </button>
+        
+                    <button class="bouton" onclick="addThing('level3',1,0)">
+                        <span id="shop3" class="line">shop 3</span><img class="imshop" src="./Images/shop3.png" id="shopimg3"/>
+                    </button>
+        
+                    <button class="bouton" onclick="addThing('level4',1,0)">
+                        <span id="shop4" class="line">shop 4</span><img class="imshop" src="./Images/shop4.png" id="shopimg4"/>
+                    </button>
+        
+                    <button class="bouton" onclick="addThing('level5',1,0)">
+                        <span id="shop5" class="line">shop 5</span><img class="imshop" src="./Images/shop5.png" id="shopimg5"/>
+                    </button>
+                </div>
+                <button id="mode" onclick="changeMode()">
+                    Mode québecois
+                </button>
+            </div>
+        </section>
+    </div>
+    <script language = "javascript">
+        //Flag qui contrôle l'ouverture de la porte du décors
+        var porte = false;
+        //Fonction qui permet de trouver les coordonnées absolues des zones cliquables
+        var setClicable = setInterval(function()
+        {
+            var hImg = 580;
+            var wImg = 1021;
+            var w = window.innerWidth;
+            var h = w / wImg * hImg;
+            var pin1 = document.getElementById("pin1");
+            var pin2 = document.getElementById("pin2");
+            var pinpop = document.getElementById("pinpop")
+            if (!quebecois)
+            {
+                pinpop.style.height = 400+"px";
+                pin1.style.width = 60+"px";
+                pin1.style.height = 90+"px";
+                pin2.style.width = 40+"px";
+                pin2.style.height = 110+"px";
+                pinpop.style.transform = "translate("+w/3.5+"px,"+h/4+"px)";
+                pin1.style.transform = "translate("+w/1.85+"px,"+h/1.75+"px)";
+                pin2.style.transform = "translate("+w/1.56+"px,"+h/1.60+"px)";
+            }
+            else
+            {
+                pin1.style.width = 60+"px";
+                pin1.style.height = 40+"px";
+                pin2.style.width = 80+"px";
+                pin2.style.height = 80+"px";
+                pin1.style.transform = "translate("+w/5.58+"px,"+h/2+"px)";
+                pin2.style.transform = "translate("+w/1.3+"px,"+h/1.90+"px)";
+            }
+        },100);
+    </script>
+</body>
+</html>
